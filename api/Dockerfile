@@ -1,5 +1,5 @@
 #Etap 1 - Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 #Etap 2 - kopiujemy csproj

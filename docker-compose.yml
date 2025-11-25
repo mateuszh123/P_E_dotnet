@@ -3,7 +3,7 @@
 services:
   api:
     build:
-      context: ./Api
+      context: ./api
       dockerfile: Dockerfile
     container_name: dotnet-api-demo
     ports:
@@ -28,4 +28,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  dbata:
+  dbdata:
