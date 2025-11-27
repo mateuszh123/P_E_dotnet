@@ -1,39 +1,36 @@
-**ETAP I**
+# 🧪 REST API – .NET + Docker + PostgreSQL (TODO z priorytetem)
 
-**1. Sklonuj projekt z github.com i wejdź do katalogu projektu**
+Prosty projekt edukacyjny pokazujący, jak:
 
-git clone adres_repozytorium
-cd /nazwa_repozytorium
+- uruchomić **REST API w .NET** w kontenerze Dockera,  
+- połączyć się z bazą **PostgreSQL** w drugim kontenerze,  
+- utworzyć tabelę **Todos** z kolumną **Priority**,  
+- korzystać z API jako ćwiczenia dla uczniów.
 
-**2. Uruchom Docker Compose**
+Projekt przeznaczony jest jako **ćwiczenie dla technikum informatycznego**.
 
-a) Sprawdź uruchomione kontenery
-sudo docker-compose ps 
+---
 
-b) Jeśli nie ma żadnych kontenerów na liście, zbuduj projekt
-sudo docker-compose build
+## 🧱 Technologie
 
-c) Uruchom w tle serwisy zaimplementowane w Docker Compose - API i DB
-sudo docker-compose up -d
+- .NET 9 (minimal API)
+- PostgreSQL 16 (Docker)
+- Docker + Docker Compose
+- HTML + JavaScript (prosty frontend)
 
-**ETAP II**
-Podłączenie bazdy danych PostgreSQL i utworzenie tabeli wraz z kolumnami
+---
 
-**1) Zaloguj się do kontenera z PostgreSQL**
-sudo docker-compose exec db psql -U demo -d demo
+## ⚙️ Wymagania wstępne
 
-**2) Utwórz tabelę w bazie danych**
-CREATE TABLE "Todos" (
-  "Id" SERIAL PRIMARY KEY,
-  "Title" TEXT NOT NULL,
-  "IsDone" BOOLEAN NOT NULL,
-  "CreatedAt" TIMESTAMPTZ NOT NULL
-);
+- Zainstalowany **Docker** oraz **Docker Compose**
+- System Linux / WSL / inne środowisko zgodne z Dockerem
 
-**3) Dodaj dodatkową kolumnę na priorytet**
-ALTER TABLE "Todos" ADD COLUMN "Priority" INT DEFAULT 1;
+---
 
+## ▶️ ETAP I – Uruchomienie kontenerów (API + DB)
 
-**4) Wyloguj się z bazy danych i kontenera**
-\q
+1. **Sklonuj projekt i wejdź do katalogu:**
 
+   ```bash
+   git clone https://github.com/adrianflak/restapi_dotnet_priority.git
+   cd restapi_dotnet_priority
