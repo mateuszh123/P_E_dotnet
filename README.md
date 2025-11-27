@@ -1,6 +1,6 @@
 **ETAP I**
 
-1. Sklonuj projekt z github.com i wejdź do katalogu projektu
+**1. Sklonuj projekt z github.com i wejdź do katalogu projektu**
 
 git clone adres_repozytorium
 cd /nazwa_repozytorium
@@ -34,6 +34,6 @@ CREATE TABLE "Todos" (
 ALTER TABLE "Todos" ADD COLUMN "Priority" INT DEFAULT 1;
 
 
-4) Wyloguj się z bazy danych i kontenera
+**4) Wyloguj się z bazy danych i kontenera**
 \q
 
